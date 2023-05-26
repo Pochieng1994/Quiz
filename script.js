@@ -1,9 +1,3 @@
-/*Create an HTML form with a three-question quiz
--Each question should have four multiple-choice answers to choose from.
--When the user submits the quiz, add a message underneath each question 
-letting them know if they got it right/wrong (give them the correct answer).
-*/
-
 let capital = document.querySelector('#capital');
 let language = document.querySelector('#language');
 let area = document.querySelector('#area');
@@ -15,8 +9,6 @@ let correctAnswer3 = document.getElementById('southern-thailand');
 
 let myForm = document.querySelector('#form');
 
-let numberOfAttempts = 0;
-
 submit.addEventListener('click', function() {
 
 
@@ -24,7 +16,7 @@ submit.addEventListener('click', function() {
     capital.textContent = 'Congrats you answered correctly, the capital Bangkok!';
     capital.style.color = 'green';
   } else {
-    capital.textContent = 'Your answer is not correct, the correct is Bangkok';
+    capital.textContent = 'Your answer is not correct, the correct answer is Bangkok';
     capital.style.color = 'red';
   }
 
@@ -32,7 +24,7 @@ submit.addEventListener('click', function() {
     language.textContent = 'Congrats you answered correctly, the official language is Thai!';
     language.style.color = 'green';
   } else {
-    language.textContent = 'Your answer is not correct, the official language is Thai!';
+    language.textContent = 'Your answer is not correct, the official language is Thai';
     language.style.color = 'red';
   }
 
@@ -47,7 +39,7 @@ submit.addEventListener('click', function() {
 })
 
 myForm.addEventListener('submit', function(event) {
-  event.preventDefault;
+  event.preventDefault();
 })
 
 
